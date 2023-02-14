@@ -5,6 +5,7 @@ pkgs.mkShell {
   nativeBuildInputs = [
     pkgs.cargo
     pkgs.gcc
+    pkgs.graphviz-nox
     pkgs.nodePackages.mermaid-cli
     pkgs.openssl
     pkgs.pkg-config

@@ -28,7 +28,7 @@ pub async fn list_pull_requests(request: Request) -> Result<Response, Box<dyn Er
     let pull_requests = pull_requests.into_iter()
         .filter(|x| match &request.author {
             None => true,
-            Some(a) => *a == x.author
+            Some(a) => a.to_lowercase() == x.author.to_lowercase()
         })
         .collect();
 

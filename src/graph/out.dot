@@ -1,0 +1,30 @@
+digraph {
+  4 [
+    label="Feature 4",
+    URL="https://github.com/Sixstring982/test-repo/pull/4"
+  ];
+  4 -> 2;
+  4 -> 1;
+
+
+  3 [
+    label="Feature 3: unsafe chars in title? [abc] (def) {ghi} 'foo' 'bar'",
+    URL="https://github.com/Sixstring982/test-repo/pull/3"
+  ];
+  3 -> 1;
+  3 -> 1;
+
+  2 [
+    label="Feature 2",
+    URL="https://github.com/Sixstring982/test-repo/pull/2"
+  ];
+
+  2 -> "Sixstring982:main";
+
+  1 [
+    label="Feature 1",
+    URL="https://github.com/Sixstring982/test-repo/pull/1"
+  ];
+
+  1 -> "Sixstring982:main";
+}

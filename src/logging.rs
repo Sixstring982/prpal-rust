@@ -3,7 +3,10 @@ use log::LevelFilter;
 use simplelog::{Config, SimpleLogger};
 
 pub fn init(log_level: LogLevel) -> Result<(), Box<dyn std::error::Error>> {
-    Ok(SimpleLogger::init(to_level_filter(log_level), Config::default())?)
+    Ok(SimpleLogger::init(
+        to_level_filter(log_level),
+        Config::default(),
+    )?)
 }
 
 #[derive(Clone, ValueEnum)]
